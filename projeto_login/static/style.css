@@ -42,3 +42,80 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+/* --- CAMADAS DE ESTRELAS COM CSS PURO --- */
+
+/* Camada 1 (Estrelas mais distantes e lentas) */
+#stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 1740px 105px #FFF, 1289px 123px #FFF, 1714px 1198px #FFF, 1024px 343px #FFF, 1424px 304px #FFF; /* Exemplo, o gerador cria milhares */
+  animation: animStar 50s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10; /* Bem atrás */
+}
+#stars:after {
+  content: " ";
+  position: absolute;
+  top: 2000px; /* Garante que o fundo seja contínuo na rolagem */
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 1740px 105px #FFF, 1289px 123px #FFF, 1714px 1198px #FFF, 1024px 343px #FFF, 1424px 304px #FFF;
+}
+
+/* Camada 2 (Estrelas médias) */
+#stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 1740px 105px #FFF, 1289px 123px #FFF; /* Exemplo */
+  animation: animStar 100s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9;
+}
+#stars2:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 1740px 105px #FFF, 1289px 123px #FFF;
+}
+
+/* Camada 3 (Estrelas mais próximas e rápidas) */
+#stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 1740px 105px #FFF, 1289px 123px #FFF; /* Exemplo */
+  animation: animStar 150s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -8;
+}
+#stars3:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 1740px 105px #FFF, 1289px 123px #FFF;
+}
+
+/* --- ANIMAÇÃO DO MOVIMENTO --- */
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px); /* Move as estrelas para cima */
+  }
+}
