@@ -110,12 +110,13 @@ button:hover {
   box-shadow: 1740px 105px #FFF, 1289px 123px #FFF;
 }
 
-/* --- ANIMAÇÃO DO MOVIMENTO --- */
-@keyframes animStar {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-2000px); /* Move as estrelas para cima */
-  }
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz o vídeo cobrir a tela sem esticar errado */
+    z-index: -1; /* Joga o vídeo para trás de tudo */
+    filter: brightness(0.6); /* Opcional: escurece um pouco o vídeo para o formulário aparecer mais */
 }
