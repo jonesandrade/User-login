@@ -5,42 +5,43 @@
     box-sizing: border-box;
 }
 
-/* BODY CENTRALIZADO */
+/* BODY */
 body {
     font-family: 'Arial', sans-serif;
     height: 100vh;
     display: flex;
-    justify-content: center; /* central horizontal */
-    align-items: center;     /* central vertical */
+    justify-content: center;
+    align-items: center;
     background: #000;
     overflow: hidden;
-    position: relative;
 }
 
-/* FUNDO (VIDEO OU IMAGEM) */
+/* VIDEO FUNDO */
 .video-background {
     position: fixed;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -2;
+    z-index: 0; /* IMPORTANTE */
 }
 
-/* OVERLAY SUAVE (ajuda o contraste do branco) */
-body::before {
-    content: "";
+/* OVERLAY (escurecer fundo) */
+.overlay {
     position: fixed;
     inset: 0;
-    background: radial-gradient(circle at center, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
-    z-index: -1;
+    background: rgba(0,0,0,0.4);
+    z-index: 1; /* abaixo do card */
 }
 
-/* CARD LOGIN (BRANCO DESFOCADO SUAVE) */
+/* LOGIN CARD (GLASS REAL) */
 .login-container {
-    background: rgba(255, 255, 255, 0.08); /* branco com baixa opacidade */
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    position: relative;
+    z-index: 2; /* acima de tudo */
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 
     border-radius: 20px;
     padding: 35px;
@@ -55,12 +56,7 @@ body::before {
     color: white;
 }
 
-/* TÍTULO */
-.login-container h2 {
-    margin-bottom: 15px;
-}
-
-/* INPUTS */
+/* INPUT */
 input {
     width: 100%;
     padding: 14px;
@@ -71,48 +67,22 @@ input {
     border-radius: 8px;
 
     color: white;
-    font-size: 15px;
-    outline: none;
-    transition: 0.3s;
-}
-
-input:focus {
-    border-color: rgba(0, 123, 255, 0.8);
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
 }
 
 /* BOTÃO */
 button {
     width: 100%;
     padding: 14px;
-
     background: linear-gradient(135deg, #007bff, #00c6ff);
     color: white;
-
     border: none;
     border-radius: 8px;
-    font-weight: bold;
     cursor: pointer;
-
-    margin-top: 10px;
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: scale(1.03);
-    opacity: 0.95;
 }
 
 /* LINK */
 a {
     color: #ccc;
-    text-decoration: none;
-    font-size: 14px;
     display: block;
     margin-top: 15px;
-    transition: 0.3s;
-}
-
-a:hover {
-    color: white;
 }
