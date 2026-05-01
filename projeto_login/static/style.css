@@ -66,7 +66,7 @@ input {
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 8px;
 
-    color: white; /* texto digitado */
+    color: black; /* texto digitado */
     font-size: 15px;
 }
 
