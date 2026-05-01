@@ -1,30 +1,23 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Arial', sans-serif;* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* BODY CENTRALIZADO */
 body {
     font-family: 'Arial', sans-serif;
     height: 100vh;
     display: flex;
-    /* ESTES DOIS COMANDOS JUNTOS COLOCAM NO CENTRO EXATO */
-    justify-content: center; /* Centraliza na horizontal */
-    align-items: center;     /* Centraliza na vertical */
-    
+    justify-content: center; /* CENTRAL HORIZONTAL */
+    align-items: center;     /* CENTRAL VERTICAL */
     background-color: #000;
     overflow: hidden;
     position: relative;
 }
 
-/* O vídeo de fundo continua igual */
+/* FUNDO (VIDEO OU IMAGEM) */
 .video-background {
     position: fixed;
     top: 0;
@@ -35,83 +28,69 @@ body {
     z-index: -1;
 }
 
-/* O Bloco de Login - Ajustado para o centro */
+/* CARD LOGIN (GLASS EFFECT) */
 .login-container {
-    background: rgba(255, 255, 255, 0.1) !important; 
-    backdrop-filter: blur(15px); 
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    
-    padding: 20px;
+
+    padding: 35px;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    width: 90%;          /* No celular ocupa quase tudo */
-    max-width: 150px;    /* No PC trava em 350px */
+
+    width: 90%;
+    max-width: 350px;
+
     text-align: center;
     color: white;
-    z-index: 10;         /* Garante que fique na frente do vídeo */
-}
-    height: 100vh;
-    display: flex;
-    justify-content: flex-end; /* Joga para a direita */
-    align-items: center;
-    padding-right: 8%; /* Ajusta a distância do astronauta */
-    background-color: #000;
-    overflow: hidden;
+    z-index: 10;
 }
 
-/* O vídeo de fundo */
-.video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-/* O Bloco de Login - Agora com Transparência REAL */
-.login-container {
-    background: rgba(255, 255, 255, 0.1) !important; /* Força a transparência */
-    backdrop-filter: blur(15px); /* O desfoque */
-    -webkit-backdrop-filter: blur(15px);
-    
-    padding: 40px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    width: 350px;
-    text-align: center;
-    color: white;
-}
-
-/* Ajustando os inputs para eles APARECEREM */
+/* INPUTS */
 input {
     width: 100%;
-    padding: 15px;
+    padding: 14px;
     margin: 10px 0;
-    background: rgba(0, 0, 0, 0.5); /* Fundo escuro nos campos para dar contraste */
-    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 8px;
+
     color: white;
-    font-size: 16px;
+    font-size: 15px;
 }
 
+/* BOTÃO */
 button {
     width: 100%;
-    padding: 15px;
-    background-color: #007bff;
+    padding: 14px;
+
+    background: linear-gradient(135deg, #007bff, #00c6ff);
     color: white;
+
     border: none;
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
+
     margin-top: 10px;
+    transition: 0.3s;
 }
 
+button:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+/* LINK */
 a {
     color: #ccc;
     text-decoration: none;
     font-size: 14px;
     display: block;
     margin-top: 15px;
+}
+
+a:hover {
+    color: white;
 }
