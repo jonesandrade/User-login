@@ -62,7 +62,7 @@ input {
     padding: 14px;
     margin: 10px 0;
 
-    background: rgba(255, 255, 255, 0.2); /* mais claro */
+    background: rgba(000, 000, 000, 0.0); /* mais claro */
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 8px;
 
@@ -72,7 +72,7 @@ input {
 
 /* placeholder (Usuário / Senha) */
 input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(48, 40, 145, 0.28);
 }
 
 /* BOTÃO */
