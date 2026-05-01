@@ -5,7 +5,51 @@
 }
 
 body {
+    font-family: 'Arial', sans-serif;* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    /* ESTES DOIS COMANDOS JUNTOS COLOCAM NO CENTRO EXATO */
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center;     /* Centraliza na vertical */
+    
+    background-color: #000;
+    overflow: hidden;
+    position: relative;
+}
+
+/* O vídeo de fundo continua igual */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* O Bloco de Login - Ajustado para o centro */
+.login-container {
+    background: rgba(255, 255, 255, 0.1) !important; 
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px);
+    
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 90%;          /* No celular ocupa quase tudo */
+    max-width: 350px;    /* No PC trava em 350px */
+    text-align: center;
+    color: white;
+    z-index: 10;         /* Garante que fique na frente do vídeo */
+}
     height: 100vh;
     display: flex;
     justify-content: flex-end; /* Joga para a direita */
