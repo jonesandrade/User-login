@@ -28,24 +28,35 @@ body {
     z-index: -1;
 }
 
-/* CARD LOGIN (GLASS EFFECT) */
 .login-container {
-    background: rgba(255,255,255,0.1);
+    position: relative; /* IMPORTANTE */
+    z-index: 2;
+
+    /* vidro mais visível */
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.18),
+        rgba(255,255,255,0.05)
+    );
+
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(12px);
 
     padding: 35px;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    box-shadow: 
+        0 10px 40px rgba(0,0,0,0.5),
+        inset 0 0 20px rgba(255,255,255,0.08);
 
     width: 90%;
     max-width: 350px;
 
     text-align: center;
     color: white;
-    z-index: 10;
 }
-
 /* INPUTS */
 input {
     width: 100%;
