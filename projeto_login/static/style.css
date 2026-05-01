@@ -30,8 +30,8 @@ body {
 
 /* CARD LOGIN (GLASS EFFECT) */
 .login-container {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(15px);
 
     padding: 35px;
