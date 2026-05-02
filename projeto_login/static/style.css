@@ -1,9 +1,40 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY CENTRALIZADO */
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    overflow: hidden;
+    position: relative;
+}
+
+/* FUNDO (VIDEO OU IMAGEM) */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* 🔥 CONTAINER GLASS (AJUSTADO) */
 .login-container {
     position: relative;
     z-index: 2;
 
-    /* vidro mais limpo (menos "leite") */
-    background: rgba(255, 255, 255, 0.08);
+    /* vidro mais real */
+    background: rgba(255, 255, 255, 0.07);
 
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
@@ -15,11 +46,77 @@
 
     box-shadow: 
         0 10px 40px rgba(0,0,0,0.5),
-        inset 0 0 20px rgba(255,255,255,0.1); /* corrigido */
+        inset 0 0 20px rgba(255,255,255,0.1);
 
     width: 90%;
     max-width: 350px;
 
     text-align: center;
+    color: white;
+}
+
+/* INPUT */
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+
+    color: white;
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+/* PLACEHOLDER */
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* FOCO (efeito moderno) */
+input:focus {
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(0, 200, 255, 0.7);
+
+    box-shadow: 0 0 12px rgba(0, 200, 255, 0.4);
+}
+
+/* BOTÃO */
+button {
+    width: 100%;
+    padding: 14px;
+
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+/* LINK */
+a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin-top: 15px;
+}
+
+a:hover {
     color: white;
 }
