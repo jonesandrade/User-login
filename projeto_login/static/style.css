@@ -1,1 +1,25 @@
-/* RESET */ * { margin: 0; padding: 0; box-sizing: border-box; } /* BODY CENTRALIZADO */ body { font-family: 'Arial', sans-serif; height: 100vh; display: flex; justify-content: center; /* CENTRAL HORIZONTAL */ align-items: center; /* CENTRAL VERTICAL */ background-color: #000; overflow: hidden; position: relative; } /* FUNDO (VIDEO OU IMAGEM) */ .video-background { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; } .login-container { position: relative; /* IMPORTANTE */ z-index: 2; /* vidro mais visível */ background: linear-gradient( 135deg, rgba(255,255,255,0.18), rgba(255,255,255,0.05) ); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 35px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.25); box-shadow: 0 10px 40px rgba(0,0,0,0.5), inset 0 0 20px rgba(255,255,255,01); width: 90%; max-width: 350px; text-align: center; color: white; } input { width: 100%; padding: 14px; margin: 10px 0; background: rgba(255, 255, 255, 0.2); /* mais claro */ border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 8px; color: white; /* texto digitado */ font-size: 15px; } /* placeholder (Usuário / Senha) */ input::placeholder { color: rgba(255, 255, 255, 0.7); } /* BOTÃO */ button { width: 100%; padding: 14px; background: linear-gradient(135deg, #007bff, #00c6ff); color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 10px; transition: 0.3s; } button:hover { transform: scale(1.03); opacity: 0.9; } /* LINK */ a { color: #ccc; text-decoration: none; font-size: 14px; display: block; margin-top: 15px; } a:hover { color: white; } meu codego completo
+.login-container {
+    position: relative;
+    z-index: 2;
+
+    /* vidro mais limpo (menos "leite") */
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    padding: 35px;
+    border-radius: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    box-shadow: 
+        0 10px 40px rgba(0,0,0,0.5),
+        inset 0 0 20px rgba(255,255,255,0.1); /* corrigido */
+
+    width: 90%;
+    max-width: 350px;
+
+    text-align: center;
+    color: white;
+}
